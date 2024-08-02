@@ -19,9 +19,14 @@ def main():
     while count < n:
         for k in range(n):
             if indeg[k] == 0 and flag[k] == 0:
-                print(f" {k+1}", end="")
+                print(f" {k + 1}", end="")
                 flag[k] = 1
                 count += 1
+                for i in range(n):
+                    if c[k][i] == 1:
+                        indeg[i] -= 1
+
+    print()  # For a new line after the topological order output
 
     return 0
 
