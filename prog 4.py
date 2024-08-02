@@ -8,6 +8,8 @@ def Input(Array, n):
     for i in range(0, n):
         ele = random.randrange(1, 50)
         # adding the element to the array
+        Array.append(ele)
+
 
 # Selection Sort
 def selectionSort(Array, size):
